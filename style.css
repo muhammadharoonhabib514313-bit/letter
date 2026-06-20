@@ -1,168 +1,178 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-height:100vh;
-font-family: Georgia, serif;
-background:
-linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.8)),
-url('https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=1920');
-background-size:cover;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
+    height:100vh;
+    font-family: Georgia, serif;
+    background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=1920');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
-/* LEFT PANEL */
+/* LANDING PAGE */
 .left-panel{
-text-align:center;
-color:white;
-animation: fadeIn 2s ease;
+    text-align:center;
+    color:white;
+    animation: fadeIn 2s ease;
 }
 
 .left-panel h2{
-font-size:60px;
-font-style:italic;
+    font-size:60px;
+    font-style:italic;
 }
 
 .left-panel h1{
-font-size:90px;
-color:#ffd2d2;
-text-shadow:0 0 25px crimson;
+    font-size:90px;
+    color:#ffd2d2;
+    text-shadow:0 0 25px crimson;
 }
 
 .left-panel p{
-font-size:28px;
-margin:30px;
+    font-size:28px;
+    margin:30px;
 }
 
 button{
-padding:20px 50px;
-font-size:28px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-background:linear-gradient(45deg,#6b0000,#ff1744);
-color:white;
-box-shadow:0 0 30px crimson;
-transition:.4s;
+    padding:20px 50px;
+    font-size:28px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#6b0000,#ff1744);
+    color:white;
+    box-shadow:0 0 30px crimson;
+    transition:.4s;
 }
 
 button:hover{
-transform:scale(1.1);
-box-shadow:0 0 50px red;
+    transform:scale(1.1);
+    box-shadow:0 0 50px red;
 }
 
-/* POPUP */
+/* POPUP BACKGROUND */
 .popup{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.85);
-z-index:100;
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    z-index:100;
 }
 
+/* POPUP CONTAINER */
 .popup-content{
-width:80%;
-max-width:1000px;
-height:85vh;
-margin:3% auto;
-display:flex;
-background:#111;
-border-radius:25px;
-overflow:hidden;
-border:2px solid crimson;
-box-shadow:0 0 40px crimson;
-animation: popupAnim .7s ease;
+    width:80%;
+    max-width:1000px;
+    height:85vh;
+    margin:3% auto;
+    display:flex;
+    background:#111;
+    border-radius:25px;
+    overflow:hidden;
+    border:2px solid crimson;
+    box-shadow:0 0 40px crimson;
+    animation: popupAnim .7s ease;
 }
 
+/* LEFT SIDE IMAGE (YOUR MASHHAD IMAGE) */
 .image-section{
-width:50%;
-background:url('couple.jpg');
-background-size:cover;
-background-position:center;
+    width:50%;
+    background-image:url('image.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
+/* RIGHT SIDE MESSAGE */
 .message-section{
-width:50%;
-padding:40px;
-color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-background:
-linear-gradient(rgba(10,0,0,.8), rgba(30,0,0,.95));
+    width:50%;
+    padding:40px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:
+    linear-gradient(rgba(10,0,0,.85), rgba(30,0,0,.97));
 }
 
 .message-section h2{
-font-size:48px;
-margin-bottom:30px;
-color:#ffdada;
+    font-size:48px;
+    margin-bottom:30px;
+    color:#ffdada;
 }
 
 .message-section p{
-font-size:25px;
-line-height:1.8;
-animation: typewriter 4s steps(200);
+    font-size:25px;
+    line-height:1.8;
 }
 
 .message-section h3{
-margin-top:40px;
-color:#ff4d6d;
-font-size:35px;
+    margin-top:40px;
+    color:#ff4d6d;
+    font-size:35px;
 }
 
+/* CLOSE BUTTON */
 .close{
-position:absolute;
-right:70px;
-top:40px;
-font-size:50px;
-color:white;
-cursor:pointer;
-z-index:999;
+    position:absolute;
+    right:70px;
+    top:40px;
+    font-size:50px;
+    color:white;
+    cursor:pointer;
+    z-index:999;
 }
 
+/* ANIMATIONS */
 @keyframes popupAnim{
-from{
-transform:scale(.7);
-opacity:0;
-}
-to{
-transform:scale(1);
-opacity:1;
-}
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 
 @keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 
-/* Floating hearts */
+/* FLOATING HEARTS */
 .hearts::before,
 .hearts::after{
-content:"❤️";
-position:absolute;
-font-size:30px;
-animation: float 8s infinite linear;
+    content:"❤️";
+    position:absolute;
+    font-size:30px;
+    animation: float 8s infinite linear;
 }
 
 .hearts::after{
-left:80%;
-animation-delay:3s;
+    left:80%;
+    animation-delay:3s;
 }
 
 @keyframes float{
-from{
-transform:translateY(100vh);
-opacity:0;
-}
-to{
-transform:translateY(-20vh);
-opacity:1;
-}
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-20vh);
+        opacity:1;
+    }
 }
